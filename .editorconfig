@@ -1,0 +1,18 @@
+# Master editorconfig--do not search for other editorconfig files
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{js, ts, json, jsx, html}]
+indent_size = 2
+
+[*.java]
+indent_size = 4

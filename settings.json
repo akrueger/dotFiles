@@ -1,0 +1,39 @@
+
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "off",
+    "editor.wordWrap": true,
+
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+
+    "window.restoreFullscreen": true,
+    "window.newWindowDimensions": "maximized",
+
+    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "Source Code Pro",
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "vim.useSystemClipboard": true,
+
+    "files.associations": {
+      "splitRepo": "shellscript",
+      "cmdHist": "shellscript"
+    },
+
+    "docker.enableLinting": true,
+
+    "vsicons.presets.angular": false,
+    "vsicons.projectDetection.autoReload": true,
+    "terminal.integrated.shellArgs.osx": [],
+    "workbench.colorTheme": "Oceanic Next Italic",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.welcome.enabled": false
+  }

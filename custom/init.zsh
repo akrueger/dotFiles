@@ -15,6 +15,9 @@ alias y=yarn
 alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+# Show biggest files in git repo
+alias git_find_big_blobs='~/dotFiles/git_find_big_blobs.sh'
+
 # List hidden files
 alias tree='tree -a'
 
@@ -66,3 +69,5 @@ alias grp='git remote prune'
 alias gwfR='git checkout --'
 
 alias gdi='git status --ignored'
+
+alias gRepoSize='git count-objects -vH'

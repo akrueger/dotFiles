@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 
 # Python script to find the largest files in a git repository.
@@ -115,7 +115,7 @@ def printOutBlobs(blobs):
 		p = Popen(["column", "-t", "-s", "','"], stdin=PIPE, stdout=PIPE, stderr=PIPE)
 		stdout, stderr = p.communicate("\n".join(csvLines))
 
-		print "\nAll sizes in mB. The pack column is the compressed size of the object inside the pack file.\n"
+		print "\nAll sizes in kB. The pack column is the compressed size of the object inside the pack file.\n"
 		print stdout.rstrip('\n')
 	else:
 		print "No files found which match those criteria."
@@ -146,7 +146,7 @@ class Blob(object):
 
 	def __init__(self, line):
 		cols = line.split()
-		self.sha1, self.size, self.packedSize = cols[0], float(cols[2]), float(cols[3])
+		self.sha1, self.size, self.packedSize = cols[0], int(cols[2]), int(cols[3])
 
 	def __repr__(self):
 		return '{} - {} - {} - {}'.format(self.sha1, self.size, self.packedSize, self.path)
@@ -158,10 +158,9 @@ class Blob(object):
 			return self.packedSize < other.packedSize
 
 	def csvLine(self):
-		return "{},{},{},{}".format(self.size/(2**20), self.packedSize/(2**20), self.sha1, self.path)
+		return "{},{},{},{}".format(self.size/1024, self.packedSize/1024, self.sha1, self.path)
 
 
 # Default function is main()
 if __name__ == '__main__':
 	main()
-0

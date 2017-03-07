@@ -1,0 +1,2 @@
+#!/usr/bin/zsh
+ruby ~/dotFiles/git_find_big_blobs.rb

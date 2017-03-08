@@ -1,2 +1,0 @@
-#!/usr/bin/zsh
-python ~/dotFiles/git_find_big_blobs.py

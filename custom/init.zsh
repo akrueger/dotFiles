@@ -70,4 +70,4 @@ alias gwfR='git checkout --'
 
 alias gdi='git status --ignored'
 
-alias gRepoSize='git count-objects -vH'
+alias git_repo_size='git count-objects -vH'

@@ -1,0 +1,10 @@
+{
+  "name": "gitBigBlobs",
+  "version": "1.0.0",
+  "main": "gitBigBlobs.js",
+  "license": "MIT",
+  "dependencies": {
+    "split2": "^2.1.1",
+    "sprintf-js": "^1.0.3"
+  }
+}

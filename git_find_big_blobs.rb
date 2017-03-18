@@ -1,4 +1,5 @@
 #!/usr/local/bin ruby -w
+
 args = ARGV
 MiB = 1024 ** 2
 $limit = 50
@@ -34,7 +35,8 @@ def commits
   IO.popen(git_commit_list_cmd) do | commits |
     commits.each_line do | commitHash |
       commitHash.chomp!
-      for blob in `git ls-tree -zlr #{commitHash}`.split("\0")
+      for blob in `git ls-tree -zlr ae0cddd9f4e75959d75fd1d5b2f251ae70450f61`.split("\0")
+        puts blob
         blobHash = blob.split[2]
         if pack_object_pack_size.has_key? blobHash
           path = blob.split[4]

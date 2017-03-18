@@ -1,0 +1,2 @@
+#!/usr/bin/zsh
+node ~/dotFiles/gitBigBlobs/gitBigBlobs.js

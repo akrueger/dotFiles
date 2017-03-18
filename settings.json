@@ -25,7 +25,8 @@
 
     "files.associations": {
       "splitRepo": "shellscript",
-      "cmdHist": "shellscript"
+      "cmdHist": "shellscript",
+      "*.log": "log"
     },
 
     "docker.enableLinting": true,

@@ -41,10 +41,10 @@ def main():
 
 	args = parseArguments()
 	sortByOnDiskSize = args.sortByOnDiskSize
-	sizeLimit = 1024*args.filesExceeding
+	sizeLimit = 1024**2 * float(args.filesExceeding)
 
 	if args.filesExceeding > 0:
-		print "Finding objects larger than {}kB…".format(args.filesExceeding)
+		print "Finding objects larger than {} MiB...".format(args.filesExceeding)
 	else:
 		print "Finding the {} largest objects…".format(args.matchCount)
 
@@ -107,7 +107,7 @@ def populateBlobPaths(blobs):
 
 def printOutBlobs(blobs):
 	if len(blobs):
-		csvLines = ["size,pack,hash,path"]
+		csvLines = ["[size],[pack],[hash],[path]"]
 
 		for blob in sorted(blobs.values(), reverse=True):
 			csvLines.append(blob.csvLine())
@@ -115,7 +115,7 @@ def printOutBlobs(blobs):
 		p = Popen(["column", "-t", "-s", "','"], stdin=PIPE, stdout=PIPE, stderr=PIPE)
 		stdout, stderr = p.communicate("\n".join(csvLines))
 
-		print "\nAll sizes in kB. The pack column is the compressed size of the object inside the pack file.\n"
+		print "\nAll sizes in MiB. The pack column is the compressed size of the object inside the pack file.\n"
 		print stdout.rstrip('\n')
 	else:
 		print "No files found which match those criteria."
@@ -125,8 +125,8 @@ def parseArguments():
 	parser = argparse.ArgumentParser(description='List the largest files in a git repository')
 	parser.add_argument('-c', '--match-count', dest='matchCount', type=int, default=10,
 						help='The number of files to return. Default is 10. Ignored if --files-exceeding is used.')
-	parser.add_argument('--files-exceeding', dest='filesExceeding', type=int, default=0,
-						help='The cutoff amount, in KB. Files with a pack size (or pyhsical size, with -p) larger than this will be printed.')
+	parser.add_argument('--files-exceeding', dest='filesExceeding', default=50,
+						help='The cutoff amount, in MiB. Files with a pack size (or pyhsical size, with -p) larger than this will be printed.')
 	parser.add_argument('-p', '--physical-sort', dest='sortByOnDiskSize', action='store_true', default=False,
 						help='Sort by the on-disk size of the files. Default is to sort by the pack size.')
 
@@ -146,7 +146,7 @@ class Blob(object):
 
 	def __init__(self, line):
 		cols = line.split()
-		self.sha1, self.size, self.packedSize = cols[0], int(cols[2]), int(cols[3])
+		self.sha1, self.size, self.packedSize = cols[0], float(cols[2]), float(cols[3])
 
 	def __repr__(self):
 		return '{} - {} - {} - {}'.format(self.sha1, self.size, self.packedSize, self.path)
@@ -158,7 +158,7 @@ class Blob(object):
 			return self.packedSize < other.packedSize
 
 	def csvLine(self):
-		return "{},{},{},{}".format(self.size/1024, self.packedSize/1024, self.sha1, self.path)
+		return "{},{},{},{}".format(round(self.size/1024**2, 1), round(self.packedSize/1024**2, 1), self.sha1[:7], self.path)
 
 
 # Default function is main()

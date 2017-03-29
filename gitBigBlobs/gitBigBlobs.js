@@ -80,7 +80,7 @@ function searchCommits() {
     })
 
   commitListProcess
-    .on('exit', () => {
+    .on('close', () => {
       console.timeEnd('<<< COMMIT LIST PROCESS >>>')
       console.log('Searching through commits...')
       console.time('<<< COMMIT TREE PROCESS >>>')

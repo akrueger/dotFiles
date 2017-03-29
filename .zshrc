@@ -45,6 +45,9 @@ export PATH="/usr/local/bin:$PATH"
 ### Jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 
+### Ant
+export PATH="/usr/local/opt/ant@1.9/bin:$PATH"
+
 # Yarn
 export PATH="$PATH:`yarn global bin`"
 

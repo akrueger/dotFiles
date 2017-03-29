@@ -36,5 +36,8 @@
     "terminal.integrated.shellArgs.osx": [],
     "workbench.colorTheme": "Oceanic Next Italic",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.welcome.enabled": false
+    "workbench.welcome.enabled": false,
+    
+    "platformio.enableTelemetry": false,
+    "editor.cursorStyle": "block"
   }

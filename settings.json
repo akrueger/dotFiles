@@ -39,5 +39,9 @@
     "workbench.welcome.enabled": false,
     
     "platformio.enableTelemetry": false,
-    "editor.cursorStyle": "block"
-  }
+    "[xml]": {
+    
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderIndicators": false
+}

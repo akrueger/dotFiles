@@ -40,7 +40,6 @@ unalias gra
 unalias gri
 unalias gdi
 
-
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
 
 alias gia='git add --all'
@@ -65,6 +64,9 @@ alias grp='git remote prune'
 
 alias gwfR='git checkout --'
 
-alias gdi='git status --ignored'
+alias gi='git status --ignored'
+
+alias gd='git difftool'
+alias gdg='git difftool --gui'
 
 alias git_repo_size='git count-objects -vH'

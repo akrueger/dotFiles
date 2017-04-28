@@ -30,7 +30,9 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # Zim git restructure
 unalias glg
+unalias gls
 unalias glG
+unalias gfc
 unalias gia
 unalias gca
 unalias gcf
@@ -39,6 +41,7 @@ unalias gcs
 unalias gbl
 unalias gbc
 unalias gm
+unalias gma
 unalias gR
 unalias gRl
 unalias gRa
@@ -53,16 +56,17 @@ unalias gra
 unalias grc
 unalias gri
 unalias grs
+unalias gsd
 unalias gwd
 unalias gwD
 unalias gdi
 unalias gs
 
+alias glf='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
 
 alias gia='git add --all'
 
-alias gcam='git commit --verbose --amend'
 alias gcs='git show --word-diff'
 alias gcsn='git show --name-status'
 alias gcf='git log --all --grep'
@@ -77,10 +81,10 @@ alias gbs='git checkout'
 alias gbl='git branch -av'
 
 alias gm='git merge --no-ff'
-alias gmc='git merge --continue'
+alias gmab='git merge --abort'
 
 alias gRi='git rebase --interactive'
-alias gRa='git rebase --abort'
+alias gRab='git rebase --abort'
 
 alias grl='git remote --verbose'
 alias gra='git remote add'

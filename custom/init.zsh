@@ -30,25 +30,50 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # Zim git restructure
 unalias glg
+unalias glG
 unalias gia
 unalias gca
+unalias gcf
+unalias gcF
+unalias gcs
 unalias gbl
 unalias gbc
 unalias gm
+unalias gR
+unalias gRl
 unalias gRa
+unalias gRx
+unalias gRm
+unalias gRu
+unalias gRp
+unalias gRs
+unalias gRb
+unalias gr
 unalias gra
+unalias grc
 unalias gri
+unalias grs
+unalias gwd
+unalias gwD
 unalias gdi
+unalias gs
 
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
 
 alias gia='git add --all'
 
-alias gca='git commit --verbose --amend'
+alias gcam='git commit --verbose --amend'
+alias gcs='git show --word-diff'
+alias gcsn='git show --name-status'
+alias gcf='git log --all --grep'
+alias gcfr='git log -g --grep-reflog'
 
-alias gt='git tag -a'
+alias gtl='git tag -l'
+alias gta='git tag -a'
+alias gtx='git tag -d'
 
 alias gba='git checkout -b'
+alias gbs='git checkout'
 alias gbl='git branch -av'
 
 alias gm='git merge --no-ff'
@@ -66,7 +91,14 @@ alias gwfR='git checkout --'
 
 alias gi='git status --ignored'
 
-alias gd='git difftool'
-alias gdg='git difftool --gui'
+alias gs='git stash save --include-untracked'
+alias gss='git stash show --word-diff'
+
+alias gd='git diff --no-ext-diff --word-diff'
+alias gdt='git difftool'
+alias gdtg='git difftool --gui'
+alias gdp='git format-patch -1'
+
+alias gap='git am'
 
 alias git_repo_size='git count-objects -vH'

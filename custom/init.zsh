@@ -28,81 +28,90 @@ alias ggetopt='/usr/local/opt/gnu-getopt/bin/getopt'
 alias dir='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
-# Zim git restructure
-unalias glg
-unalias gls
-unalias glG
-unalias gfc
-unalias gia
-unalias gca
-unalias gcf
-unalias gcF
-unalias gcs
-unalias gbl
-unalias gbc
-unalias gm
-unalias gma
-unalias gR
-unalias gRl
-unalias gRa
-unalias gRx
-unalias gRm
-unalias gRu
-unalias gRp
-unalias gRs
-unalias gRb
-unalias gr
-unalias gra
-unalias grc
-unalias gri
-unalias grs
-unalias gsd
-unalias gwd
-unalias gwD
-unalias gdi
-unalias gs
+### Git ###
 
-alias glf='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
-alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
+# Log variables
+_git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
+_git_log_fullgraph_format='%C(green)%h%C(reset) %<|(50,trunc)%s %C(bold blue)<%an>%C(reset) %C(yellow)(%cd)%C(reset)%C(auto)%d%C(reset)%n'
 
+# Working tree (w)
+alias gws='git status --short'
+alias gwR='git reset --hard'
+alias gwfR='git checkout --'
+
+# Index (i)
 alias gia='git add --all'
+alias gir='git reset'
+alias gix='git rm -r --cached'
 
+# Commit (c)
+alias gc='git commit --verbose'
+alias gcm='git commit --message'
+alias gco='git checkout'
 alias gcs='git show --word-diff'
 alias gcsn='git show --name-status'
 alias gcf='git log --all --grep'
 alias gcfr='git log -g --grep-reflog'
 
-alias gtl='git tag -l'
-alias gta='git tag -a'
-alias gtx='git tag -d'
-
-alias gba='git checkout -b'
-alias gbs='git checkout'
+# Branch (b)
 alias gbl='git branch -av'
+alias gbs='git checkout'
+alias gba='git checkout -b'
+alias gbx='git branch -d'
+alias gbX='git branch -D'
 
-alias gm='git merge --no-ff'
-alias gmab='git merge --abort'
-
-alias gRi='git rebase --interactive'
-alias gRab='git rebase --abort'
-
+# Remote (r)
 alias grl='git remote --verbose'
 alias gra='git remote add'
 alias grx='git remote rm'
 alias grp='git remote prune'
 
-alias gwfR='git checkout --'
+# Fetch (f)
+alias gf='git fetch'
+alias gfm='git pull'
 
-alias gi='git status --ignored'
+# Merge (m)
+alias gm='git merge --no-ff'
+alias gmt='git mergetool'
+alias gmab='git merge --abort'
 
+# Push (p)
+alias gp='git push'
+alias gpt='git push --tags'
+
+# Rebase (R)
+alias gRi='git rebase --interactive'
+alias gRab='git rebase --abort'
+
+# Log (l)
+alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
+alias glf='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
+alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
+
+# Stash (s)
 alias gs='git stash save --include-untracked'
+alias gsl='git stash list'
 alias gss='git stash show --word-diff'
+alias gsp='git stash pop'
+alias gsa='git stash apply'
+alias gsx='git stash drop'
 
+# Diff (d)
 alias gd='git diff --no-ext-diff --word-diff'
 alias gdt='git difftool'
 alias gdtg='git difftool --gui'
 alias gdp='git format-patch -1'
 
+# Tag (t)
+alias gtl='git tag -l'
+alias gta='git tag -a'
+alias gtx='git tag -d'
+
+# Patch
 alias gap='git am'
 
+# Ignore (ig)
+alias gig='git status --ignored'
+
+# Repo
 alias git_repo_size='git count-objects -vH'

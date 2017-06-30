@@ -1,47 +1,61 @@
-
 {
-    "editor.fontSize": 16,
-    "editor.fontFamily": "Operator Mono",
-    "editor.fontLigatures": true,
-    "editor.tabSize": 2,
-    "editor.lineNumbers": "off",
-    "editor.wordWrap": true,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "off",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
 
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
 
-    "window.restoreFullscreen": true,
-    "window.newWindowDimensions": "maximized",
+  "window.restoreFullscreen": true,
+  "window.newWindowDimensions": "maximized",
 
-    "terminal.integrated.fontLigatures": true,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "Source Code Pro",
+  "terminal.integrated.fontLigatures": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Source Code Pro",
 
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
 
-    "vim.useSystemClipboard": true,
-
-    "files.associations": {
-      "splitRepo": "shellscript",
-      "cmdHist": "shellscript",
-      "*.log": "log"
-    },
-
-    "docker.enableLinting": true,
-
-    "vsicons.presets.angular": false,
-    "vsicons.projectDetection.autoReload": true,
-    "terminal.integrated.shellArgs.osx": [],
-    "workbench.colorTheme": "Oceanic Next Italic",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.welcome.enabled": false,
-    
-    "platformio.enableTelemetry": false,
-    "[xml]": {
-    
+  "files.associations": {
+    "splitRepo": "shellscript",
+    "cmdHist": "shellscript",
+    "*.log": "log"
   },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.js.map": true,
+    "**/*.js": { "when": "$(basename).ts" }
+  },
+
+  "docker.enableLinting": true,
+
+  "vsicons.presets.angular": true,
+  "vsicons.projectDetection.autoReload": true,
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "terminal.integrated.shellArgs.osx": [],
+
+  "workbench.colorTheme": "Oceanic Next Italic",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.welcome.enabled": false,
+
   "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.renderIndicators": false
+  "diffEditor.renderIndicators": false,
+
+  "tslint.rulesDirectory": "./node_modules/codelyzer",
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "prettier.semi": false,
+  "prettier.singleQuote": true
 }

@@ -54,24 +54,26 @@ alias gcf='git log --all --grep'
 alias gcfr='git log -g --grep-reflog'
 
 # Branch (b)
-alias gbl='git branch -av'
+alias gbl='git branch -avv'
 alias gbs='git checkout'
 alias gba='git checkout -b'
-alias gbx='git branch -d'
-alias gbX='git branch -D'
+alias gbx='git branch --delete'
+alias gbX='git branch --delete --force'
+alias gbrX='git push --delete'
 
 # Remote (r)
 alias grl='git remote --verbose'
 alias gra='git remote add'
 alias grx='git remote rm'
-alias grp='git remote prune'
 
 # Fetch (f)
 alias gf='git fetch'
+alias gfc='git clone'
 alias gfm='git pull'
 
 # Merge (m)
-alias gm='git merge --no-ff'
+alias gm='git merge'
+alias gmnf='git merge --no-ff'
 alias gmt='git mergetool'
 alias gmab='git merge --abort'
 
@@ -86,6 +88,7 @@ alias gRab='git rebase --abort'
 # Log (l)
 alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
 alias glf='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
+alias glfo='git log --name-status --oneline'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_fullgraph_format}" --date=relative'
 
 # Stash (s)
@@ -100,6 +103,7 @@ alias gsx='git stash drop'
 alias gd='git diff --no-ext-diff --word-diff'
 alias gdt='git difftool'
 alias gdtg='git difftool --gui'
+alias gdf='git diff --name-status'
 alias gdp='git format-patch -1'
 
 # Tag (t)

@@ -3,5 +3,10 @@
 { "key": "ctrl+j",              "command": "editor.action.moveLinesDownAction",
                                      "when": "editorTextFocus && !editorReadonly" },
 { "key": "ctrl+k",                "command": "editor.action.moveLinesUpAction",
-                                     "when": "editorTextFocus && !editorReadonly" }
-]
+                                    "when": "editorTextFocus && !editorReadonly"
+                                  },
+                                  {
+                                    "key": "ctrl+shift+t",
+                                    "command": "workbench.action.tasks.runTask"
+                                  }
+                                ]

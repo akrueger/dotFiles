@@ -7,8 +7,30 @@ export VISUAL='code'
 ### z
 . ~/z.sh
 
+### Path
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
+
+# Jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+
+# Ant
+export PATH="/usr/local/opt/ant@1.9/bin:$PATH"
+
+# gpg-agent
+# export GPG_TTY=$(tty)
+# [ -f ~/.gnupg/.gpg-agent-info ] && source ~/.gnupg/.gpg-agent-info
+# if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
+#     export GPG_AGENT_INFO
+# else
+#     eval $( gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf )
+# fi
+
 ### Jenv
 eval "$(jenv init -)"
+
+### Nodenv
+eval "$(nodenv init -)"
 
 ### Powerline
 #POWERLEVEL9K_MODE='awesome-patched'
@@ -37,28 +59,6 @@ POWERLEVEL9K_PUBLIC_IP_BACKGROUND='006'
 POWERLEVEL9K_PUBLIC_IP_FOREGROUND='016'
 POWERLEVEL9K_PUBLIC_IP_ICON=$'\uf0ac'
 POWERLEVEL9K_CUSTOM_JAVA='echo $(jenv version-name) $POWERLEVEL9K_JAVA_ICON'
-
-### Path
-# Homebrew
-export PATH="/usr/local/bin:$PATH"
-
-### Jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-
-### Ant
-export PATH="/usr/local/opt/ant@1.9/bin:$PATH"
-
-# Yarn
-export PATH="$PATH:`yarn global bin`"
-
-# gpg-agent
-# export GPG_TTY=$(tty)
-# [ -f ~/.gnupg/.gpg-agent-info ] && source ~/.gnupg/.gpg-agent-info
-# if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-#     export GPG_AGENT_INFO
-# else
-#     eval $( gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf )
-# fi
 
 ### Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then

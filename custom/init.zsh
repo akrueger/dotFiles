@@ -67,7 +67,7 @@ alias gra='git remote add'
 alias grx='git remote rm'
 
 # Fetch (f)
-alias gf='git fetch'
+alias gf='git fetch --prune'
 alias gfc='git clone'
 alias gfm='git pull'
 

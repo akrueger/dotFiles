@@ -273,6 +273,8 @@
 	<string>3B2F4E33-E24F-4012-A87B-51A6348B9F6D</string>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>LeftCommand</key>
 	<integer>7</integer>
 	<key>LeftOption</key>
@@ -323,16 +325,20 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>21 223 1259 263 0 0 1440 878 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2330 193 620 392 1920 -171 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2253 20 796 473 1920 -171 1440 878 </string>
+	<string>2253 112 770 381 1920 -171 1440 878 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1921 -164 1447 863 1920 -171 1440 878 </string>
+	<string>1920 -167 1440 874 1920 -171 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 555 745 502 0 0 1920 1058 </string>
+	<string>240 478 745 502 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1923 -162 1435 863 1920 -171 1440 878 </string>
+	<string>4 9 1432 863 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1923 -162 1435 863 1920 -171 1440 878 </string>
+	<string>3 4 1915 1053 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>1923 -162 1435 863 1920 -171 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -1084,8 +1090,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-05T14:48:27Z</date>
+	<date>2017-09-20T14:02:11Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>Secure Input</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
@@ -1098,6 +1108,8 @@
 		<string>Captured Output</string>
 		<string>Recent Directories</string>
 	</array>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1498414720</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -1105,7 +1117,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>6</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

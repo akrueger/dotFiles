@@ -10,6 +10,9 @@
 
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorTheme": "Oceanic Next Italic",
+  "workbench.iconTheme": "vscode-icons",
 
   "window.restoreFullscreen": true,
   "window.newWindowDimensions": "maximized",
@@ -46,10 +49,6 @@
 
   "terminal.integrated.shellArgs.osx": [],
 
-  "workbench.colorTheme": "Oceanic Next Italic",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.welcome.enabled": false,
-
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderIndicators": false,
 
@@ -57,5 +56,22 @@
   "typescript.tsdk": "node_modules/typescript/lib",
 
   "prettier.semi": false,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "workbench.startupEditor": "newUntitledFile",
+
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid"
+  ],
+  "window.zoomLevel": 0
 }

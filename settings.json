@@ -16,6 +16,7 @@
 
   "window.restoreFullscreen": true,
   "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 0,
 
   "terminal.integrated.fontLigatures": true,
   "terminal.integrated.cursorBlinking": true,
@@ -40,8 +41,6 @@
     "**/*.js.map": true,
     "**/*.js": { "when": "$(basename).ts" }
   },
-
-  "docker.enableLinting": true,
 
   "vsicons.presets.angular": true,
   "vsicons.projectDetection.autoReload": true,
@@ -72,6 +71,5 @@
     "markdown",
     "vue",
     "liquid"
-  ],
-  "window.zoomLevel": 0
+  ]
 }

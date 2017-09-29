@@ -49,7 +49,7 @@ alias gc='git commit --verbose'
 alias gcm='git commit --message'
 alias gco='git checkout'
 alias gcs='git show --word-diff'
-alias gcsn='git show --name-status'
+alias gcsf='git show --name-status'
 alias gcf='git log --all --grep'
 alias gcfr='git log -g --grep-reflog'
 

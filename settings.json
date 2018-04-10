@@ -7,31 +7,23 @@
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.colorTheme": "Oceanic Next Italic",
   "workbench.iconTheme": "vscode-icons",
-
   "window.restoreFullscreen": true,
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 0,
-
-  "terminal.integrated.fontLigatures": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Source Code Pro",
-
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-
   "files.associations": {
     "splitRepo": "shellscript",
     "cmdHist": "shellscript",
     "*.log": "log"
   },
-
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -39,37 +31,40 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/*.js.map": true,
-    "**/*.js": { "when": "$(basename).ts" }
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
   },
-
   "vsicons.presets.angular": true,
   "vsicons.projectDetection.autoReload": true,
   "vsicons.dontShowNewVersionMessage": true,
-
   "terminal.integrated.shellArgs.osx": [],
-
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderIndicators": false,
-
   "tslint.rulesDirectory": "./node_modules/codelyzer",
+  "tslint.packageManager": "yarn",
   "typescript.tsdk": "node_modules/typescript/lib",
-
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
   "workbench.startupEditor": "newUntitledFile",
-
-  "auto-close-tag.activationOnLanguage": [
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascript",
-    "javascriptreact",
-    "typescriptreact",
-    "plaintext",
-    "markdown",
-    "vue",
-    "liquid"
-  ]
+  "workbench.colorTheme": "Oceanic Next Italic",
+  "[git-commit]": {
+    "editor.rulers": [
+      50
+    ]
+  },
+  "gitlens.keymap": "none",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.gitExplorer.files.layout": "auto",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false
 }

@@ -110,6 +110,7 @@ alias gdp='git format-patch -1'
 alias gtl='git tag -l'
 alias gta='git tag -a'
 alias gtx='git tag -d'
+alias gtX='git push --delete'
 
 # Patch
 alias gap='git am'

@@ -61,6 +61,8 @@ POWERLEVEL9K_PUBLIC_IP_ICON=$'\uf0ac'
 POWERLEVEL9K_CUSTOM_JAVA='echo $(jenv version-name) $POWERLEVEL9K_JAVA_ICON'
 
 ### Source zim
-if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
-  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
-fi
+# Change default zim location
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+# Start zim
+[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh

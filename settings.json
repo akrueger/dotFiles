@@ -3,7 +3,6 @@
   "editor.fontFamily": "Operator Mono",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "editor.lineNumbers": "off",
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
@@ -47,9 +46,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Oceanic Next Italic",
   "[git-commit]": {
-    "editor.rulers": [
-      50
-    ]
+    "editor.rulers": [50]
   },
   "gitlens.keymap": "none",
   "gitlens.advanced.messages": {
@@ -66,5 +63,20 @@
   "gitlens.historyExplorer.enabled": true,
   "gitlens.gitExplorer.files.layout": "auto",
   "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false
+  "gitlens.currentLine.enabled": false,
+  "html.suggest.angular1": false,
+  "npm.packageManager": "yarn",
+  "npm.enableScriptExplorer": true,
+  "git.autofetch": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["cypress.json"],
+      "url": "https://on.cypress.io/cypress.schema.json"
+    }
+  ],
+  "java.home": "/Users/akrueger/.jenv/versions/oracle64-1.8.0.131",
+  "java.autobuild.enabled": false,
+  "java.import.gradle.enabled": false,
+  "java.import.maven.enabled": false,
+  "html.format.wrapLineLength": 0
 }

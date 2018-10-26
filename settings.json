@@ -6,6 +6,7 @@
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -43,7 +44,6 @@
   "tslint.rulesDirectory": "./node_modules/codelyzer",
   "tslint.packageManager": "yarn",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Oceanic Next Italic",
   "[git-commit]": {
     "editor.rulers": [50]
@@ -78,5 +78,6 @@
   "java.autobuild.enabled": false,
   "java.import.gradle.enabled": false,
   "java.import.maven.enabled": false,
-  "html.format.wrapLineLength": 0
+  "html.format.wrapLineLength": 0,
+  "editor.fontWeight": "100"
 }

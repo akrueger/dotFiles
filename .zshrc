@@ -11,6 +11,9 @@ export VISUAL='code'
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 
+# Visual Studio Code
+export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
+
 # Jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 
@@ -34,7 +37,7 @@ eval "$(nodenv init -)"
 
 ### Powerline
 #POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_MODE='nerdfont-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_INSTALLATION_PATH=~/.zim/modules/prompt/external-themes/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(node_version custom_java ssh public_ip)

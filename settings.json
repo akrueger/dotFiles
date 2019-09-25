@@ -1,6 +1,7 @@
 {
-  "editor.fontSize": 16,
+  "editor.fontWeight": "100",
   "editor.fontFamily": "Operator Mono",
+  "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -10,13 +11,12 @@
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.iconTheme": "vscode-icons",
   "window.restoreFullscreen": true,
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 0,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "Source Code Pro",
+  "terminal.integrated.fontFamily": "Operator Mono",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "files.associations": {
@@ -33,11 +33,12 @@
     "**/*.js.map": true,
     "**/*.js": {
       "when": "$(basename).ts"
-    }
+    },
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
-  "vsicons.presets.angular": true,
-  "vsicons.projectDetection.autoReload": true,
-  "vsicons.dontShowNewVersionMessage": true,
   "terminal.integrated.shellArgs.osx": [],
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderIndicators": false,
@@ -46,7 +47,9 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "workbench.colorTheme": "Oceanic Next Italic",
   "[git-commit]": {
-    "editor.rulers": [50]
+    "editor.rulers": [
+      50
+    ]
   },
   "gitlens.keymap": "none",
   "gitlens.advanced.messages": {
@@ -70,14 +73,45 @@
   "git.autofetch": true,
   "json.schemas": [
     {
-      "fileMatch": ["cypress.json"],
+      "fileMatch": [
+        "cypress.json"
+      ],
       "url": "https://on.cypress.io/cypress.schema.json"
     }
   ],
-  "java.home": "/Users/akrueger/.jenv/versions/oracle64-1.8.0.131",
+  "java.home": "/Users/akrueger/.jenv/versions/8.0.131",
   "java.autobuild.enabled": false,
   "java.import.gradle.enabled": false,
   "java.import.maven.enabled": false,
   "html.format.wrapLineLength": 0,
-  "editor.fontWeight": "100"
+  "terminal.external.osxExec": "iTerm.app",
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "editor.renderControlCharacters": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": false,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.projectDetection.autoReload": true,
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.semi": false,
+  "vsicons.dontShowNewVersionMessage": true
 }

@@ -11,8 +11,17 @@ export VISUAL='code'
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 
+# MariaDB
+export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"
+
 # Visual Studio Code
 export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
+
+# Posgres
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
+# EdgeDB
+export PATH="/Library/Frameworks/EdgeDB.framework/bin:$PATH"
 
 # Jenv
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -34,6 +43,9 @@ eval "$(jenv init -)"
 
 ### Nodenv
 eval "$(nodenv init -)"
+
+### Rbenv
+eval "$(rbenv init -)"
 
 ### Powerline
 #POWERLEVEL9K_MODE='awesome-patched'

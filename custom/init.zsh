@@ -120,3 +120,4 @@ alias gig='git status --ignored'
 
 # Repo
 alias git_repo_size='git count-objects -vH'
+alias git_all_commits='gitk --all $( git fsck --no-reflog | awk '\''/dangling commit/ {print $3}'\'' )'

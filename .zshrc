@@ -14,6 +14,9 @@ export PATH="/usr/local/bin:$PATH"
 # MariaDB
 export PATH="/usr/local/opt/mariadb@10.0/bin:$PATH"
 
+# Disable Microsoft telemetry
+export MSSQL_CLI_TELEMETRY_OPTOUT="True"
+
 # Visual Studio Code
 export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 
